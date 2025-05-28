@@ -14,7 +14,11 @@
             <SwiperSlide v-for="skill in skills" :key="skill.name">
                 <div class="flex flex-col items-center min-w-[200px]">
                     <div class="w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-indigo-300 text-white text-3xl shadow border border-indigo-400 shadow-white/40">
-                        <img :src="skill.icon" :alt="skill.name" class="w-20 h-20 md:w-24 md:h-24" />
+                        <img 
+                            :src="skill.icon" 
+                            :alt="skill.name" 
+                            class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"
+                        />
                     </div>
                     <span class="mt-4 text-base font-semibold text-gray-700">{{ skill.name }}</span>
                 </div>
