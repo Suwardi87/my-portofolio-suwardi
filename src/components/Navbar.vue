@@ -1,6 +1,6 @@
 <template>
     <header class="flex justify-between items-center p-6 bg-opacity-50 relative z-20">
-        <div class="text-white text-3xl font-bold">Logo</div>
+        <div class="text-white text-3xl font-bold">Suwardi</div>
         <!-- mobile toggle button (tampil di mobile, sembunyi di md ke atas) -->
         <div class="md:hidden">
             <button type="button"
