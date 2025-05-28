@@ -24,7 +24,7 @@
         </div>
         <!-- navbar link -->
         <nav
-            class="absolute top-0 left-0 w-full h-screen bg-secondary/75 bg-opacity-90 flex items-center justify-center transition-all duration-300 md:static md:bg-transparent md:h-auto md:flex md:items-center md:justify-end"
+            class="absolute top-0 left-0 w-full h-screen bg-secondary bg-opacity-90 flex items-center justify-center transition-all duration-300 md:static md:bg-transparent md:h-auto md:flex md:items-center md:justify-end"
             :class="{ 'block': isMenuOpen, 'hidden': !isMenuOpen, 'md:flex': true }">
             <ul class="flex flex-col items-center space-y-5 md:flex-row md:space-x-8 md:space-y-0">
                 <li v-for="item in Menu" :key="item.name">
