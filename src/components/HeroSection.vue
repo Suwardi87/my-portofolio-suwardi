@@ -33,17 +33,46 @@
                             <span class="absolute inset-0 rounded-3xl origin-center transition-all ease-in-out bg-primary group-hover:bg-transparent"></span>
                             <span class="relative flex items-center justify-center text-white"> Hire Me </span>
                         </button>
-                        <button class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center overflow-hidden transition-all duration-300 hover:bg-primary hover:shadow-lg hover:scale-105">
+                        <button
+                            @click="showResume = true"
+                            class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center overflow-hidden transition-all duration-300  text-primary hover:bg-primary hover:text-white hover:shadow-lg hover:scale-105"
+                        >
                             <span class="flex items-center gap-2 relative z-10 transition-colors duration-300 group-hover:text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
                                 </svg>
-                                <p class="text-gray-300 group-hover:text-white transition-colors duration-300"> Download CV</p>
+                                <select v-model="selectedLanguage" class="bg-transparent text-primary group-hover:text-white transition-colors duration-300 outline-none">
+                                    <option value="id">Bahasa Indonesia</option>
+                                    <option value="en">English</option>
+                                </select>
+                                <p class="text-primary group-hover:text-white transition-colors duration-300">
+                                    {{ selectedLanguage === 'id' ? 'Lihat Resume' : 'View Resume' }}
+                                </p>
                             </span>
                             <span class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-full"></span>
                         </button>
                     </div>
-                    <!-- Animated Scroll Down SVG -->
+                    <!-- Resume Pop Up Modal -->
+                    <div
+                        v-if="showResume"
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 overflow-y-auto"
+                    >
+                        <div
+                            class="bg-white rounded-lg shadow-xl w-full max-w-xs sm:max-w-lg md:max-w-2xl p-4 sm:p-6 relative mx-2 my-8"
+                        >
+                            <button
+                                class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl"
+                                @click="showResume = false"
+                            >&times;</button>
+                            <h3 class="text-xl font-bold mb-4 text-gray-800">
+                                {{ selectedLanguage === 'id' ? 'Resume Bahasa Indonesia' : 'Resume English' }}
+                            </h3>
+                            <iframe
+                                :src="selectedLanguage === 'id' ? '/suwardi resume indo.pdf' : '/suwardi resume english.pdf'"
+                                class="w-full h-[60vh] sm:h-[70vh] border rounded"
+                            ></iframe>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-4">
                     <img
@@ -91,6 +120,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const typingText = ref('')
+const showResume = ref(false)
+const selectedLanguage = ref('id')
 
 function typeEffect(text, i = 0) {
     if (i === 0) typingText.value = ''
