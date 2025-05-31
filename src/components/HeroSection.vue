@@ -115,7 +115,7 @@
 import { ref, onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import foto2 from '../assets/IMG_1641.jpg'
+import foto2 from '../assets/foto.jpg'
 
 const typingText = ref('')
 const showResume = ref(false)
