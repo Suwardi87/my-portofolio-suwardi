@@ -76,7 +76,7 @@
                 </div>
                 <div class="flex flex-col items-center justify-center gap-4">
                     <img
-                        src="@/assets/img2.jpg"
+                        src="@/assets/foto2.jpg"
                         alt="Hero Image"
                         class="w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full shadow-xl border-4 border-primary transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-white/10 backdrop-blur-sm"
                         data-aos="fade-up"
