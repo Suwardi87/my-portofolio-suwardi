@@ -6,17 +6,14 @@
     <SkillSection />
     <ContactSection />
     <FooterSection />
-    
   </div>
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue';
-const Navbar = defineAsyncComponent(() => import('@/components/Navbar.vue'));
-const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'));
-const ServiceSection = defineAsyncComponent(() => import('@/components/ServiceSection.vue'));
-const SkillSection = defineAsyncComponent(() => import('@/components/SkillSection.vue'));
-const ContactSection = defineAsyncComponent(() => import('@/components/ContactSection.vue'));
-const FooterSection = defineAsyncComponent(() => import('@/components/FooterSection.vue'));
-
+import Navbar from './components/Navbar.vue'
+import HeroSection from './components/HeroSection.vue'
+import ServiceSection from './components/ServiceSection.vue'
+import SkillSection from './components/SkillSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import FooterSection from './components/FooterSection.vue'
 </script>

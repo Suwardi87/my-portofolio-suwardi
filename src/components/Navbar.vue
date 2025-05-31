@@ -41,10 +41,10 @@
 import { ref } from 'vue'
 
 const Menu = [
-    { name: 'Service', href: '#service' },
+    { name: 'Service', href: '#services' },
     { name: 'About Me', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
+    // { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' }
 ];
 

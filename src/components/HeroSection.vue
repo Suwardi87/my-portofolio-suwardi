@@ -19,10 +19,7 @@
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Enim iusto iste modi ipsam totam sapiente atque non, animi
-                        dolorem repellat officiis quod laudantium dignissimos voluptatem
-                        voluptas possimus ullam, excepturi est.
+                        Informatics Engineering graduate with a strong specialization in backend development using Laravel. Demonstrates proven experience in designing and developing web applications, leading technical projects, and actively engaging in organizational activities as both a speaker and lead coordinator. Committed to delivering high-quality solutions through a structured, efficient, and collaborative approach within development teams.
                     </p>
                     <div
                         class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"
@@ -76,7 +73,7 @@
                 </div>
                 <div class="flex flex-col items-center justify-center gap-4">
                     <img
-                        src="@/assets/foto2.jpg"
+                        :src="foto2"
                         alt="Hero Image"
                         class="w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full shadow-xl border-4 border-primary transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-white/10 backdrop-blur-sm"
                         data-aos="fade-up"
@@ -118,6 +115,7 @@
 import { ref, onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import foto2 from '../assets/IMG_1641.jpg'
 
 const typingText = ref('')
 const showResume = ref(false)
